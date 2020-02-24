@@ -1,0 +1,1898 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass scrbook
+\begin_preamble
+% in case somebody want to have the label "Equation"
+%\renewcommand{\eqref}[1]{Equation~(\negthinspace\autoref{#1})}
+
+% that links to image floats jumps to the beginning
+% of the float and not to its caption
+\usepackage[figure]{hypcap}
+
+% the pages of the TOC is numbered roman
+% and a pdf-bookmark for the TOC is added
+\let\myTOC\tableofcontents
+\renewcommand\tableofcontents{%
+  \frontmatter
+  \pdfbookmark[1]{\contentsname}{}
+  \myTOC
+  \mainmatter }
+
+% makes caption labels bold
+% for more info about these settings, see
+% https://ctan.org/tex-archive/macros/latex/contrib/koma-script/doc/scrguien.pdf
+\setkomafont{captionlabel}{\bfseries}
+\setcapindent{1em}
+
+% enables calculations
+\usepackage{calc}
+
+% fancy page header/footer settings
+% for more information see section 9 of
+% ftp://www.ctan.org/pub/tex-archive/macros/latex2e/contrib/fancyhdr/fancyhdr.pdf
+\renewcommand{\chaptermark}[1]{\markboth{#1}{#1}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+
+% increases the bottom float placement fraction
+\renewcommand{\bottomfraction}{0.5}
+
+% avoids that floats are placed above its sections
+\let\mySection\section\renewcommand{\section}{\suppressfloats[t]\mySection}
+
+% increases link area for cross-references and autoname them
+% if you change the document language to e.g. French
+% you must change "extrasenglish" to "extrasfrench"
+% if you uncomment the following lines, you cannot use the reference version Ref+Text in LyX
+%\AtBeginDocument{%
+% \renewcommand{\ref}[1]{\autoref{#1}}
+%}
+%\def\refnamechanges{%
+% \renewcommand*{\equationautorefname}[1]{}
+% \renewcommand{\sectionautorefname}{sec.\negthinspace}
+% \renewcommand{\subsectionautorefname}{sec.\negthinspace}
+% \renewcommand{\subsubsectionautorefname}{sec.\negthinspace}
+% \renewcommand{\figureautorefname}{Fig.\negthinspace}
+% \renewcommand{\tableautorefname}{Tab.\negthinspace}
+%}
+%\@ifpackageloaded{babel}{\addto\extrasenglish{\refnamechanges}}{\refnamechanges}
+\end_preamble
+\options intoc,bibliography=totoc,index=totoc,BCOR10mm,captions=tableheading,titlepage
+\use_default_options true
+\master project.lyx
+\begin_modules
+customHeadersFooters
+\end_modules
+\maintain_unincluded_children false
+\language italian
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "lmodern" "default"
+\font_sans "lmss" "default"
+\font_typewriter "lmtt" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures false
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command bibtex
+\index_command default
+\float_placement h
+\paperfontsize 12
+\spacing single
+\use_hyperref true
+\pdf_title "Your title"
+\pdf_author "Your name"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder true
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle false
+\pdf_quoted_options "pdfpagelayout=OneColumn, pdfnewwindow=true, pdfstartview=XYZ, plainpages=false"
+\papersize a4paper
+\use_geometry false
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\branch Standalone
+\selected 1
+\filename_suffix 0
+\color #ff0000
+\end_branch
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 2
+\paragraph_separation skip
+\defskip medskip
+\is_math_indent 1
+\math_indentation default
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 2
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Left Header
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+chaptername
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+thechapter
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+rightmark
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Right Header
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+leftmark
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Left Footer
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+thepage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Center Footer
+
+\end_layout
+
+\begin_layout Right Footer
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+thepage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+ASM
+\end_layout
+
+\begin_layout Standard
+Ho creato una specifica in ASM relativa a un autolavaggio; il focus è sul
+ menu di selezione e pagamento dell'autolavaggio e sul susseguirsi delle
+ fasi di lavaggio.
+\end_layout
+
+\begin_layout Standard
+È stata usata la 
+\emph on
+StandardLibrary.asm
+\emph default
+.
+\end_layout
+
+\begin_layout Section
+Descrizione
+\end_layout
+
+\begin_layout Standard
+Dopo una fase di accensione, il display dell'autolavaggio presenta un menù
+ di selezione delle fasi di lavaggi quali: risciacquo, rulli, cerchi, asciugatur
+a.
+ Il cliente seleziona le fasi di suo interesse, successivamente clicca il
+ pulsante di fine selezione.
+ Si procede al pagamento con il costo totale relativo al numero di fasi
+ scelte.
+ Quando sono stati inseriti un numero sufficiente di soldi per pagare il
+ lavaggio (non dà resto) si procede con le fasi del lavaggio selezionate
+ in ordine.
+ Terminata l'ultima fase, il sistema si riporta sul menù iniziale.
+\end_layout
+
+\begin_layout Section
+Implementazione
+\end_layout
+
+\begin_layout Standard
+Vi è un dominio per i soldi 
+\emph on
+SoldiDomain
+\emph default
+ (interi tra 0 e 50) e altri due domini relativi agli stati del sistema
+ (
+\emph on
+Stato
+\emph default
+) e ai tasti selezionati dal cliente dell'autolavaggio (
+\emph on
+Selezione
+\emph default
+).
+\end_layout
+
+\begin_layout Standard
+Vi sono tre variabili controllate:
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+stato
+\emph default
+: indica lo stato attuale del sistema.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+selezionati
+\emph default
+: funzione che memorizza per ogni selezione un valore appartenente al dominio
+ dei soldi; in particolare memorizzerà un 1 se è stata selezionata quella
+ determinata fase o 0 in caso contrario.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+sommaselezioni
+\emph default
+: variabile contenente la somma di tutte le selezioni, usata successivamente
+ per il calcolo del costo totale dell'autolavaggio in base alle fasi selezionate.
+\end_layout
+
+\begin_layout Standard
+Vi sono anche due variabili monitorate:
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+selezione
+\emph default
+: permette all'utente di selezionare una determinata fase.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+soldi
+\emph default
+: permette all'utente di inserire una certa quantità di soldi.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+// DOMAINS
+\end_layout
+
+\begin_layout Plain Layout
+
+domain SoldiDomain subsetof Integer
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+enum domain Stato = { START | MENU | PAGAMENTO | LAVORAZIONE | FRISCIACQUO
+ | FRULLI | FCERCHI | FASCIUGATURA }
+\end_layout
+
+\begin_layout Plain Layout
+
+enum domain Selezione = { RISCIACQUO | RULLI | CERCHI | ASCIUGATURA | FINESELEZI
+ONE }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+// FUNCTIONS
+\end_layout
+
+\begin_layout Plain Layout
+
+dynamic controlled stato : Stato
+\end_layout
+
+\begin_layout Plain Layout
+
+dynamic controlled selezionati : Selezione -> SoldiDomain
+\end_layout
+
+\begin_layout Plain Layout
+
+dynamic controlled sommaselezioni : SoldiDomain
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+monitored selezione : Selezione
+\end_layout
+
+\begin_layout Plain Layout
+
+monitored soldi : SoldiDomain
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Lo stato iniziale è:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+// INITIAL STATE
+\end_layout
+
+\begin_layout Plain Layout
+
+default init s0: function stato = START
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Vi sono alcune regole che governano il comportamento della macchina a stati:
+\end_layout
+
+\begin_layout Standard
+Regola 
+\series bold
+r_START:
+\end_layout
+
+\begin_layout Standard
+Resetta i valori selezionati e passa allo stato successivo, ossia 
+\emph on
+MENU
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+rule r_START =
+\end_layout
+
+\begin_layout Plain Layout
+
+	seq 		
+\end_layout
+
+\begin_layout Plain Layout
+
+		selezionati(RISCIACQUO) := 0
+\end_layout
+
+\begin_layout Plain Layout
+
+		selezionati(RULLI) := 0
+\end_layout
+
+\begin_layout Plain Layout
+
+		selezionati(CERCHI) := 0
+\end_layout
+
+\begin_layout Plain Layout
+
+		selezionati(ASCIUGATURA) := 0
+\end_layout
+
+\begin_layout Plain Layout
+
+		stato := MENU
+\end_layout
+
+\begin_layout Plain Layout
+
+	endseq
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Regola 
+\series bold
+r_MENU:
+\end_layout
+
+\begin_layout Standard
+Questa regola permette di settare a 1 il valore delle fasi selezionate dall'uten
+te.
+ Si passa allo stato 
+\emph on
+PAGAMENTO
+\emph default
+ solo quando l'utente clicca 
+\emph on
+FINESELEZIONE
+\emph default
+.
+ Prima di cambiare stato viene anche calcolata la 
+\emph on
+sommaselezioni 
+\emph default
+utile in seguito per il calcolo del costo totale del lavaggio.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+rule r_MENU =
+\end_layout
+
+\begin_layout Plain Layout
+
+	let ($s = selezione) in
+\end_layout
+
+\begin_layout Plain Layout
+
+		if ($s != FINESELEZIONE) then
+\end_layout
+
+\begin_layout Plain Layout
+
+			selezionati($s) := 1
+\end_layout
+
+\begin_layout Plain Layout
+
+		else
+\end_layout
+
+\begin_layout Plain Layout
+
+			par
+\end_layout
+
+\begin_layout Plain Layout
+
+				sommaselezioni := selezionati(RISCIACQUO) + selezionati(RULLI) + selezionati
+(CERCHI) + selezionati(ASCIUGATURA)
+\end_layout
+
+\begin_layout Plain Layout
+
+				stato := PAGAMENTO
+\end_layout
+
+\begin_layout Plain Layout
+
+			endpar
+\end_layout
+
+\begin_layout Plain Layout
+
+		endif
+\end_layout
+
+\begin_layout Plain Layout
+
+	endlet
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Regola 
+\series bold
+r_PAGAMENTO:
+\end_layout
+
+\begin_layout Standard
+In questa regola si attende che l'utente inserisce una quantità di soldi
+ pari o superiore al costo totale dell'autolavaggio calcolato precedentemente.
+ Ricevuto il pagamento si passa allo stato 
+\emph on
+LAVORAZIONE
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+rule r_PAGAMENTO =
+\end_layout
+
+\begin_layout Plain Layout
+
+ 	let ($s = soldi) in
+\end_layout
+
+\begin_layout Plain Layout
+
+		switch (sommaselezioni)
+\end_layout
+
+\begin_layout Plain Layout
+
+			case 0:
+\end_layout
+
+\begin_layout Plain Layout
+
+					if ($s >= 0) then
+\end_layout
+
+\begin_layout Plain Layout
+
+						stato := LAVORAZIONE
+\end_layout
+
+\begin_layout Plain Layout
+
+					else
+\end_layout
+
+\begin_layout Plain Layout
+
+						stato := PAGAMENTO
+\end_layout
+
+\begin_layout Plain Layout
+
+					endif
+\end_layout
+
+\begin_layout Plain Layout
+
+			case 1:
+\end_layout
+
+\begin_layout Plain Layout
+
+					if ($s >= 5) then
+\end_layout
+
+\begin_layout Plain Layout
+
+						stato := LAVORAZIONE
+\end_layout
+
+\begin_layout Plain Layout
+
+					else
+\end_layout
+
+\begin_layout Plain Layout
+
+						stato := PAGAMENTO
+\end_layout
+
+\begin_layout Plain Layout
+
+					endif
+\end_layout
+
+\begin_layout Plain Layout
+
+			case 2:
+\end_layout
+
+\begin_layout Plain Layout
+
+					if ($s >= 10) then
+\end_layout
+
+\begin_layout Plain Layout
+
+						stato := LAVORAZIONE
+\end_layout
+
+\begin_layout Plain Layout
+
+					else
+\end_layout
+
+\begin_layout Plain Layout
+
+						stato := PAGAMENTO
+\end_layout
+
+\begin_layout Plain Layout
+
+					endif
+\end_layout
+
+\begin_layout Plain Layout
+
+			case 3:
+\end_layout
+
+\begin_layout Plain Layout
+
+					if ($s >= 15) then
+\end_layout
+
+\begin_layout Plain Layout
+
+						stato := LAVORAZIONE
+\end_layout
+
+\begin_layout Plain Layout
+
+					else
+\end_layout
+
+\begin_layout Plain Layout
+
+						stato := PAGAMENTO
+\end_layout
+
+\begin_layout Plain Layout
+
+					endif
+\end_layout
+
+\begin_layout Plain Layout
+
+			case 4:
+\end_layout
+
+\begin_layout Plain Layout
+
+					if ($s >= 20) then
+\end_layout
+
+\begin_layout Plain Layout
+
+						stato := LAVORAZIONE
+\end_layout
+
+\begin_layout Plain Layout
+
+					else
+\end_layout
+
+\begin_layout Plain Layout
+
+						stato := PAGAMENTO
+\end_layout
+
+\begin_layout Plain Layout
+
+					endif
+\end_layout
+
+\begin_layout Plain Layout
+
+		endswitch
+\end_layout
+
+\begin_layout Plain Layout
+
+	endlet
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Regola 
+\series bold
+r_LAVORAZIONE:
+\end_layout
+
+\begin_layout Standard
+Questa regola è un centro di smistamento per le varie fasi: infatti si seleziona
+, in ordine, ogni fase selezionata dall'utente precedentemente.
+ Si passa ai vari stati relativi alle fasi del lavaggio per poi tornare
+ in questa regola di smistamento.
+ Finite tutte le fasi selezionate si ritorna nello stato 
+\emph on
+START
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+rule r_LAVORAZIONE =
+\end_layout
+
+\begin_layout Plain Layout
+
+ 	if (selezionati(RISCIACQUO) = 1) then
+\end_layout
+
+\begin_layout Plain Layout
+
+		stato := FRISCIACQUO
+\end_layout
+
+\begin_layout Plain Layout
+
+	else
+\end_layout
+
+\begin_layout Plain Layout
+
+		if (selezionati(RULLI) = 1) then
+\end_layout
+
+\begin_layout Plain Layout
+
+			stato := FRULLI
+\end_layout
+
+\begin_layout Plain Layout
+
+		else
+\end_layout
+
+\begin_layout Plain Layout
+
+			if (selezionati(CERCHI) = 1) then
+\end_layout
+
+\begin_layout Plain Layout
+
+				stato := FCERCHI
+\end_layout
+
+\begin_layout Plain Layout
+
+			else
+\end_layout
+
+\begin_layout Plain Layout
+
+				if (selezionati(ASCIUGATURA) = 1) then
+\end_layout
+
+\begin_layout Plain Layout
+
+					stato := FASCIUGATURA
+\end_layout
+
+\begin_layout Plain Layout
+
+				else
+\end_layout
+
+\begin_layout Plain Layout
+
+					stato := START
+\end_layout
+
+\begin_layout Plain Layout
+
+				endif
+\end_layout
+
+\begin_layout Plain Layout
+
+			endif
+\end_layout
+
+\begin_layout Plain Layout
+
+		endif
+\end_layout
+
+\begin_layout Plain Layout
+
+	endif
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Regola 
+\series bold
+r_FASI:
+\end_layout
+
+\begin_layout Standard
+In questa regola si esegue la determinata fase e si riporta la specifica
+ variabile 
+\emph on
+selezionati
+\emph default
+ a 0.
+ A fine di ogni fase si ritorna nella regola di smistamento 
+\emph on
+r_LAVORAZIONE
+\series bold
+\emph default
+.
+
+\series default
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+rule r_FASI =
+\end_layout
+
+\begin_layout Plain Layout
+
+	if (stato = FRISCIACQUO) then
+\end_layout
+
+\begin_layout Plain Layout
+
+		par
+\end_layout
+
+\begin_layout Plain Layout
+
+			// Risciacquo
+\end_layout
+
+\begin_layout Plain Layout
+
+			selezionati(RISCIACQUO) := 0
+\end_layout
+
+\begin_layout Plain Layout
+
+			stato := LAVORAZIONE
+\end_layout
+
+\begin_layout Plain Layout
+
+		endpar
+\end_layout
+
+\begin_layout Plain Layout
+
+	else
+\end_layout
+
+\begin_layout Plain Layout
+
+	 	if (stato = FRULLI) then
+\end_layout
+
+\begin_layout Plain Layout
+
+	 		par
+\end_layout
+
+\begin_layout Plain Layout
+
+				// Rulli
+\end_layout
+
+\begin_layout Plain Layout
+
+				selezionati(RULLI) := 0
+\end_layout
+
+\begin_layout Plain Layout
+
+				stato := LAVORAZIONE
+\end_layout
+
+\begin_layout Plain Layout
+
+			endpar
+\end_layout
+
+\begin_layout Plain Layout
+
+		else
+\end_layout
+
+\begin_layout Plain Layout
+
+			if (stato = FCERCHI) then
+\end_layout
+
+\begin_layout Plain Layout
+
+				par
+\end_layout
+
+\begin_layout Plain Layout
+
+					// Cerchi
+\end_layout
+
+\begin_layout Plain Layout
+
+					selezionati(CERCHI) := 0
+\end_layout
+
+\begin_layout Plain Layout
+
+					stato := LAVORAZIONE
+\end_layout
+
+\begin_layout Plain Layout
+
+				endpar
+\end_layout
+
+\begin_layout Plain Layout
+
+			else
+\end_layout
+
+\begin_layout Plain Layout
+
+				if (stato = FASCIUGATURA) then
+\end_layout
+
+\begin_layout Plain Layout
+
+					par
+\end_layout
+
+\begin_layout Plain Layout
+
+						// Asciugatura
+\end_layout
+
+\begin_layout Plain Layout
+
+						selezionati(ASCIUGATURA) := 0
+\end_layout
+
+\begin_layout Plain Layout
+
+						stato := LAVORAZIONE
+\end_layout
+
+\begin_layout Plain Layout
+
+					endpar
+\end_layout
+
+\begin_layout Plain Layout
+
+				else
+\end_layout
+
+\begin_layout Plain Layout
+
+					stato := START // Fine
+\end_layout
+
+\begin_layout Plain Layout
+
+				endif
+\end_layout
+
+\begin_layout Plain Layout
+
+			endif
+\end_layout
+
+\begin_layout Plain Layout
+
+		endif
+\end_layout
+
+\begin_layout Plain Layout
+
+	endif
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Regola 
+\series bold
+r_MAIN
+\series default
+:
+\end_layout
+
+\begin_layout Standard
+Questa è la main rule che governa il sistema.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+main rule r_MAIN =
+\end_layout
+
+\begin_layout Plain Layout
+
+	if (stato = START) then
+\end_layout
+
+\begin_layout Plain Layout
+
+		r_START[]
+\end_layout
+
+\begin_layout Plain Layout
+
+	else
+\end_layout
+
+\begin_layout Plain Layout
+
+		if (stato = MENU) then
+\end_layout
+
+\begin_layout Plain Layout
+
+			r_MENU[]
+\end_layout
+
+\begin_layout Plain Layout
+
+		else
+\end_layout
+
+\begin_layout Plain Layout
+
+			if (stato = PAGAMENTO) then
+\end_layout
+
+\begin_layout Plain Layout
+
+				r_PAGAMENTO[]
+\end_layout
+
+\begin_layout Plain Layout
+
+			else
+\end_layout
+
+\begin_layout Plain Layout
+
+				if (stato = LAVORAZIONE) then
+\end_layout
+
+\begin_layout Plain Layout
+
+					r_LAVORAZIONE[]
+\end_layout
+
+\begin_layout Plain Layout
+
+				else
+\end_layout
+
+\begin_layout Plain Layout
+
+					r_FASI[]
+\end_layout
+
+\begin_layout Plain Layout
+
+				endif
+\end_layout
+
+\begin_layout Plain Layout
+
+			endif
+\end_layout
+
+\begin_layout Plain Layout
+
+		endif
+\end_layout
+
+\begin_layout Plain Layout
+
+	endif
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Macchina a stati
+\end_layout
+
+\begin_layout Standard
+La macchina a stati in UML è la seguente:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename img/asm-uml.png
+	scale 77.5
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Il modello è il seguente:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename img/asm-model.png
+	scale 65
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Scenari
+\end_layout
+
+\begin_layout Standard
+Uno scenario testuale con solo la selezione del risciacquo è il seguente:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+INITIAL STATE:
+\end_layout
+
+\begin_layout Plain Layout
+
+<UpdateSet - 0>
+\end_layout
+
+\begin_layout Plain Layout
+
+selezionati(ASCIUGATURA)=0
+\end_layout
+
+\begin_layout Plain Layout
+
+selezionati(CERCHI)=0
+\end_layout
+
+\begin_layout Plain Layout
+
+selezionati(RISCIACQUO)=0
+\end_layout
+
+\begin_layout Plain Layout
+
+selezionati(RULLI)=0
+\end_layout
+
+\begin_layout Plain Layout
+
+stato=MENU
+\end_layout
+
+\begin_layout Plain Layout
+
+</UpdateSet>
+\end_layout
+
+\begin_layout Plain Layout
+
+<State 1 (controlled)>
+\end_layout
+
+\begin_layout Plain Layout
+
+selezionati(ASCIUGATURA)=0
+\end_layout
+
+\begin_layout Plain Layout
+
+selezionati(CERCHI)=0
+\end_layout
+
+\begin_layout Plain Layout
+
+selezionati(RISCIACQUO)=0
+\end_layout
+
+\begin_layout Plain Layout
+
+selezionati(RULLI)=0
+\end_layout
+
+\begin_layout Plain Layout
+
+stato=MENU
+\end_layout
+
+\begin_layout Plain Layout
+
+</State 1 (controlled)>
+\end_layout
+
+\begin_layout Plain Layout
+
+Insert a symbol of Selezione in [RISCIACQUO, RULLI, CERCHI, ASCIUGATURA,
+ FINESELEZIONE] for selezione:
+\end_layout
+
+\begin_layout Plain Layout
+
+RISCIACQUO
+\end_layout
+
+\begin_layout Plain Layout
+
+<State 1 (monitored)>
+\end_layout
+
+\begin_layout Plain Layout
+
+selezione=RISCIACQUO
+\end_layout
+
+\begin_layout Plain Layout
+
+</State 1 (monitored)>
+\end_layout
+
+\begin_layout Plain Layout
+
+<UpdateSet - 1>
+\end_layout
+
+\begin_layout Plain Layout
+
+selezionati(RISCIACQUO)=1
+\end_layout
+
+\begin_layout Plain Layout
+
+</UpdateSet>
+\end_layout
+
+\begin_layout Plain Layout
+
+<State 2 (controlled)>
+\end_layout
+
+\begin_layout Plain Layout
+
+selezionati(ASCIUGATURA)=0
+\end_layout
+
+\begin_layout Plain Layout
+
+selezionati(CERCHI)=0
+\end_layout
+
+\begin_layout Plain Layout
+
+selezionati(RISCIACQUO)=1
+\end_layout
+
+\begin_layout Plain Layout
+
+selezionati(RULLI)=0
+\end_layout
+
+\begin_layout Plain Layout
+
+stato=MENU
+\end_layout
+
+\begin_layout Plain Layout
+
+</State 2 (controlled)>
+\end_layout
+
+\begin_layout Plain Layout
+
+Insert a symbol of Selezione in [RISCIACQUO, RULLI, CERCHI, ASCIUGATURA,
+ FINESELEZIONE] for selezione:
+\end_layout
+
+\begin_layout Plain Layout
+
+FINESELEZIONE
+\end_layout
+
+\begin_layout Plain Layout
+
+<State 2 (monitored)>
+\end_layout
+
+\begin_layout Plain Layout
+
+selezione=FINESELEZIONE
+\end_layout
+
+\begin_layout Plain Layout
+
+</State 2 (monitored)>
+\end_layout
+
+\begin_layout Plain Layout
+
+<UpdateSet - 2>
+\end_layout
+
+\begin_layout Plain Layout
+
+sommaselezioni=1
+\end_layout
+
+\begin_layout Plain Layout
+
+stato=PAGAMENTO
+\end_layout
+
+\begin_layout Plain Layout
+
+</UpdateSet>
+\end_layout
+
+\begin_layout Plain Layout
+
+<State 3 (controlled)>
+\end_layout
+
+\begin_layout Plain Layout
+
+selezionati(ASCIUGATURA)=0
+\end_layout
+
+\begin_layout Plain Layout
+
+selezionati(CERCHI)=0
+\end_layout
+
+\begin_layout Plain Layout
+
+selezionati(RISCIACQUO)=1
+\end_layout
+
+\begin_layout Plain Layout
+
+selezionati(RULLI)=0
+\end_layout
+
+\begin_layout Plain Layout
+
+sommaselezioni=1
+\end_layout
+
+\begin_layout Plain Layout
+
+stato=PAGAMENTO
+\end_layout
+
+\begin_layout Plain Layout
+
+</State 3 (controlled)>
+\end_layout
+
+\begin_layout Plain Layout
+
+Insert a constant in SoldiDomain of type Integer for soldi:
+\end_layout
+
+\begin_layout Plain Layout
+
+5
+\end_layout
+
+\begin_layout Plain Layout
+
+<State 3 (monitored)>
+\end_layout
+
+\begin_layout Plain Layout
+
+soldi=5
+\end_layout
+
+\begin_layout Plain Layout
+
+</State 3 (monitored)>
+\end_layout
+
+\begin_layout Plain Layout
+
+<UpdateSet - 3>
+\end_layout
+
+\begin_layout Plain Layout
+
+stato=LAVORAZIONE
+\end_layout
+
+\begin_layout Plain Layout
+
+</UpdateSet>
+\end_layout
+
+\begin_layout Plain Layout
+
+<State 4 (controlled)>
+\end_layout
+
+\begin_layout Plain Layout
+
+selezionati(ASCIUGATURA)=0
+\end_layout
+
+\begin_layout Plain Layout
+
+selezionati(CERCHI)=0
+\end_layout
+
+\begin_layout Plain Layout
+
+selezionati(RISCIACQUO)=1
+\end_layout
+
+\begin_layout Plain Layout
+
+selezionati(RULLI)=0
+\end_layout
+
+\begin_layout Plain Layout
+
+sommaselezioni=1
+\end_layout
+
+\begin_layout Plain Layout
+
+stato=LAVORAZIONE
+\end_layout
+
+\begin_layout Plain Layout
+
+</State 4 (controlled)>
+\end_layout
+
+\begin_layout Plain Layout
+
+<UpdateSet - 4>
+\end_layout
+
+\begin_layout Plain Layout
+
+stato=FRISCIACQUO
+\end_layout
+
+\begin_layout Plain Layout
+
+</UpdateSet>
+\end_layout
+
+\begin_layout Plain Layout
+
+<State 5 (controlled)>
+\end_layout
+
+\begin_layout Plain Layout
+
+selezionati(ASCIUGATURA)=0
+\end_layout
+
+\begin_layout Plain Layout
+
+selezionati(CERCHI)=0
+\end_layout
+
+\begin_layout Plain Layout
+
+selezionati(RISCIACQUO)=1
+\end_layout
+
+\begin_layout Plain Layout
+
+selezionati(RULLI)=0
+\end_layout
+
+\begin_layout Plain Layout
+
+sommaselezioni=1
+\end_layout
+
+\begin_layout Plain Layout
+
+stato=FRISCIACQUO
+\end_layout
+
+\begin_layout Plain Layout
+
+</State 5 (controlled)>
+\end_layout
+
+\begin_layout Plain Layout
+
+<UpdateSet - 5>
+\end_layout
+
+\begin_layout Plain Layout
+
+selezionati(RISCIACQUO)=0
+\end_layout
+
+\begin_layout Plain Layout
+
+stato=LAVORAZIONE
+\end_layout
+
+\begin_layout Plain Layout
+
+</UpdateSet>
+\end_layout
+
+\begin_layout Plain Layout
+
+<State 6 (controlled)>
+\end_layout
+
+\begin_layout Plain Layout
+
+selezionati(ASCIUGATURA)=0
+\end_layout
+
+\begin_layout Plain Layout
+
+selezionati(CERCHI)=0
+\end_layout
+
+\begin_layout Plain Layout
+
+selezionati(RISCIACQUO)=0
+\end_layout
+
+\begin_layout Plain Layout
+
+selezionati(RULLI)=0
+\end_layout
+
+\begin_layout Plain Layout
+
+sommaselezioni=1
+\end_layout
+
+\begin_layout Plain Layout
+
+stato=LAVORAZIONE
+\end_layout
+
+\begin_layout Plain Layout
+
+</State 6 (controlled)>
+\end_layout
+
+\begin_layout Plain Layout
+
+<UpdateSet - 6>
+\end_layout
+
+\begin_layout Plain Layout
+
+stato=START
+\end_layout
+
+\begin_layout Plain Layout
+
+</UpdateSet>
+\end_layout
+
+\begin_layout Plain Layout
+
+<State 7 (controlled)>
+\end_layout
+
+\begin_layout Plain Layout
+
+selezionati(ASCIUGATURA)=0
+\end_layout
+
+\begin_layout Plain Layout
+
+selezionati(CERCHI)=0
+\end_layout
+
+\begin_layout Plain Layout
+
+selezionati(RISCIACQUO)=0
+\end_layout
+
+\begin_layout Plain Layout
+
+selezionati(RULLI)=0
+\end_layout
+
+\begin_layout Plain Layout
+
+sommaselezioni=1
+\end_layout
+
+\begin_layout Plain Layout
+
+stato=START
+\end_layout
+
+\begin_layout Plain Layout
+
+</State 7 (controlled)>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

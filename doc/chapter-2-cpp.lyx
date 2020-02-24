@@ -1,0 +1,2019 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass scrbook
+\begin_preamble
+% in case somebody want to have the label "Equation"
+%\renewcommand{\eqref}[1]{Equation~(\negthinspace\autoref{#1})}
+
+% that links to image floats jumps to the beginning
+% of the float and not to its caption
+\usepackage[figure]{hypcap}
+
+% the pages of the TOC is numbered roman
+% and a pdf-bookmark for the TOC is added
+\let\myTOC\tableofcontents
+\renewcommand\tableofcontents{%
+  \frontmatter
+  \pdfbookmark[1]{\contentsname}{}
+  \myTOC
+  \mainmatter }
+
+% makes caption labels bold
+% for more info about these settings, see
+% https://ctan.org/tex-archive/macros/latex/contrib/koma-script/doc/scrguien.pdf
+\setkomafont{captionlabel}{\bfseries}
+\setcapindent{1em}
+
+% enables calculations
+\usepackage{calc}
+
+% fancy page header/footer settings
+% for more information see section 9 of
+% ftp://www.ctan.org/pub/tex-archive/macros/latex2e/contrib/fancyhdr/fancyhdr.pdf
+\renewcommand{\chaptermark}[1]{\markboth{#1}{#1}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+
+% increases the bottom float placement fraction
+\renewcommand{\bottomfraction}{0.5}
+
+% avoids that floats are placed above its sections
+\let\mySection\section\renewcommand{\section}{\suppressfloats[t]\mySection}
+
+% increases link area for cross-references and autoname them
+% if you change the document language to e.g. French
+% you must change "extrasenglish" to "extrasfrench"
+% if you uncomment the following lines, you cannot use the reference version Ref+Text in LyX
+%\AtBeginDocument{%
+% \renewcommand{\ref}[1]{\autoref{#1}}
+%}
+%\def\refnamechanges{%
+% \renewcommand*{\equationautorefname}[1]{}
+% \renewcommand{\sectionautorefname}{sec.\negthinspace}
+% \renewcommand{\subsectionautorefname}{sec.\negthinspace}
+% \renewcommand{\subsubsectionautorefname}{sec.\negthinspace}
+% \renewcommand{\figureautorefname}{Fig.\negthinspace}
+% \renewcommand{\tableautorefname}{Tab.\negthinspace}
+%}
+%\@ifpackageloaded{babel}{\addto\extrasenglish{\refnamechanges}}{\refnamechanges}
+\end_preamble
+\options intoc,bibliography=totoc,index=totoc,BCOR10mm,captions=tableheading,titlepage
+\use_default_options true
+\master project.lyx
+\begin_modules
+customHeadersFooters
+\end_modules
+\maintain_unincluded_children false
+\language italian
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "lmodern" "default"
+\font_sans "lmss" "default"
+\font_typewriter "lmtt" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures false
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command bibtex
+\index_command default
+\float_placement h
+\paperfontsize 12
+\spacing single
+\use_hyperref true
+\pdf_title "Your title"
+\pdf_author "Your name"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder true
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle false
+\pdf_quoted_options "pdfpagelayout=OneColumn, pdfnewwindow=true, pdfstartview=XYZ, plainpages=false"
+\papersize a4paper
+\use_geometry false
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\branch Standalone
+\selected 1
+\filename_suffix 0
+\color #ff0000
+\end_branch
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 2
+\paragraph_separation skip
+\defskip medskip
+\is_math_indent 1
+\math_indentation default
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 2
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Left Header
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+chaptername
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+thechapter
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+rightmark
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Right Header
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+leftmark
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Left Footer
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+thepage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Center Footer
+
+\end_layout
+
+\begin_layout Right Footer
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+thepage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+C++
+\end_layout
+
+\begin_layout Standard
+Ho sviluppato un'applicazione per mostrare i costrutti tipici del C++: costrutto
+re e distruttore, campi pubblici e privati (normali, statici, costanti,
+ tipi enumerativi) con varie visibilità, metodi virtual e non, overrriding
+ e overloading degli operatori, ereditarietà multipla (diamante), librerie,
+ templates, default arguments, funzioni inline, Standard Template Library
+ (STL) (vector, list, iterator).
+\end_layout
+
+\begin_layout Standard
+Ho scelto il ciclismo come contesto perché si prestava bene per descrivere
+ questi costrutti, in particolar modo all'ereditarietà a diamante.
+\end_layout
+
+\begin_layout Section
+Classi
+\end_layout
+
+\begin_layout Standard
+Il progetto è strutturato secondo il paradigma OO, la struttura delle classi
+ è la seguente:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename img/cpp_classi.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Ciclista
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Files: Ciclista.h, Ciclista.cpp
+\end_layout
+
+\begin_layout Standard
+Questa è la classe di base, ha vari campi tra cui una variabile statica
+ 
+\emph on
+id
+\emph default
+ usata per creare un identificativo univoco per ogni ciclista; la variabile
+ statica è inizializzata soltanto la prima volta nel file 
+\emph on
+Ciclista.cpp
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+Nella libreria oltre al costruttore e distruttore sono stati definiti vari
+ metodi virtual e non tra i quali:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+public:
+\end_layout
+
+\begin_layout Plain Layout
+
+	Ciclista(string n, string c, string naz, float a, tipociclismo disc); //
+ Costruttore
+\end_layout
+
+\begin_layout Plain Layout
+
+	virtual ~Ciclista(); // Distruttore (Virtual)	
+\end_layout
+
+\begin_layout Plain Layout
+
+	virtual string toString(); // Stampa (Virtual)	
+\end_layout
+
+\begin_layout Plain Layout
+
+	string getIDString();
+\end_layout
+
+\begin_layout Plain Layout
+
+	string getNome();
+\end_layout
+
+\begin_layout Plain Layout
+
+	string getCognome();
+\end_layout
+
+\begin_layout Plain Layout
+
+	string getNazione();
+\end_layout
+
+\begin_layout Plain Layout
+
+	string getDisciplina();	
+\end_layout
+
+\begin_layout Plain Layout
+
+	float getEta();
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Il distruttore è stato definito virtual in modo da consentire di condizionare
+ l’esecuzione del codice secondo il tipo dell’istanza oggetto cui si fa
+ riferimento.
+ Il costruttore, il distruttore e i restanti metodi sono stati ridefiniti
+ nel file 
+\emph on
+Ciclista.cpp.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Ciclista::Ciclista(string n, string c, string naz, float a, tipociclismo
+ disc) {
+\end_layout
+
+\begin_layout Plain Layout
+
+	nome = n;
+\end_layout
+
+\begin_layout Plain Layout
+
+	cognome = c;
+\end_layout
+
+\begin_layout Plain Layout
+
+	nazionalita = naz;
+\end_layout
+
+\begin_layout Plain Layout
+
+	eta = a;
+\end_layout
+
+\begin_layout Plain Layout
+
+	disciplina = disc;
+\end_layout
+
+\begin_layout Plain Layout
+
+	thisid = ++id; // Incremento l'identificatore univoco progressivo
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Ciclista::~Ciclista() {
+\end_layout
+
+\begin_layout Plain Layout
+
+	cout << "Delete Ciclista" << endl;
+\end_layout
+
+\begin_layout Plain Layout
+
+	free(this);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Nella libreria è stato usato un enumerativo 
+\emph on
+tipociclismo
+\emph default
+ che può assumere i seguenti valori: pista, strada, cross.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+enum tipociclismo {
+\end_layout
+
+\begin_layout Plain Layout
+
+	pista, strada, cross
+\end_layout
+
+\begin_layout Plain Layout
+
+};
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Viene importato anche il 
+\emph on
+TemplateStringify.h
+\emph default
+, un template per la conversione di interi in stringhe (descritto in seguito).
+\end_layout
+
+\begin_layout Subsection
+Velocista
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Files: Velocista.h, Velocista.cpp
+\end_layout
+
+\begin_layout Standard
+Velocista è una classe figlia di Ciclista; nella libreria è stata usato
+ un vettore per memorizzare le gare svolte: in particolare è stato usato
+ un
+\emph on
+ vector
+\emph default
+ (Standar Template Library (STL)) sulla coppia 
+\emph on
+pair<KM, Time>
+\emph default
+ servendosi anche della libreria 
+\emph on
+Time.h
+\emph default
+ usata per rappresentare meglio le ore, i minuti e i secondi (descritta
+ in seguito).
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+protected:
+\end_layout
+
+\begin_layout Plain Layout
+
+	vector<pair<int, Time>> gare;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Inoltre viene definita una costante esterna inizializzata nel file 
+\emph on
+Velocista.cpp 
+\emph default
+e successivamente usata nel metodo 
+\emph on
+getIDString().
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+extern const char* VCONST;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sono stati aggiunti alcuni nuovi metodi nella libreria tra i quali:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+public:
+\end_layout
+
+\begin_layout Plain Layout
+
+	void addGara(int km, Time tempo);
+\end_layout
+
+\begin_layout Plain Layout
+
+	void printGare();
+\end_layout
+
+\begin_layout Plain Layout
+
+	void printUltimaGara();
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Nel costruttore presente nel file 
+\emph on
+Velocista.cpp,
+\emph default
+ viene invocato anche il costruttore della classe base Ciclista nella member
+ initializer list.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Velocista::Velocista(string n, string c, string naz, float a, tipociclismo
+ disc) :
+\end_layout
+
+\begin_layout Plain Layout
+
+	Ciclista(n, c, naz, a, disc) {
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+I nuovi metodi vengono così definiti:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+void Velocista::addGara(int km, Time tempo) {
+\end_layout
+
+\begin_layout Plain Layout
+
+	gare.push_back(make_pair(km, tempo));
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+void Velocista::printGare() {
+\end_layout
+
+\begin_layout Plain Layout
+
+	cout << "
+\backslash
+nGare di " << this->getNome() + " " + this->getCognome() << ":" << endl;
+\end_layout
+
+\begin_layout Plain Layout
+
+	pair<int, Time> p;
+\end_layout
+
+\begin_layout Plain Layout
+
+	vector<pair<int, Time>>::iterator x;
+\end_layout
+
+\begin_layout Plain Layout
+
+	for (x = gare.begin(); x != gare.end(); x++) {
+\end_layout
+
+\begin_layout Plain Layout
+
+		p = *x; // Estraggo
+\end_layout
+
+\begin_layout Plain Layout
+
+		cout << p.first << " km in " << p.second.getMilitary() << endl;
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+void Velocista::printUltimaGara() {
+\end_layout
+
+\begin_layout Plain Layout
+
+	cout << "
+\backslash
+nUltima gara di " << this->getNome() + " " + this->getCognome() << ": "
+ << gare.back().first << " km in " 			<< gare.back().second.getMilitary() <<
+ endl; // Stampa diretta
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Viene eseguito un inserimento in coda per aggiungere nuove gare disputate
+ dal velocista.
+ Nel ciclo for della stampa delle gare, per scorrere il vettore è stato
+ usato un 
+\emph on
+iterator
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+Altri metodi come il 
+\emph on
+toString() 
+\emph default
+viene fatto l'overriding rispetto al metodo virtual definito nella classe
+ padre.
+\end_layout
+
+\begin_layout Subsection
+Passista
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Files: Passista.h, Passista.cpp
+\end_layout
+
+\begin_layout Standard
+Passista è una classe figlia di Ciclista; nella libreria è stata aggiunta
+ una variabile protected 
+\emph on
+numeropodi
+\emph default
+ e alcuni metodi tra i quali:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+protected: 	
+\end_layout
+
+\begin_layout Plain Layout
+
+	int numeropodi;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+public:
+\end_layout
+
+\begin_layout Plain Layout
+
+	string getPodi();
+\end_layout
+
+\begin_layout Plain Layout
+
+	void addPodi(int np);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Nel costruttore presente nel file 
+\emph on
+Passista.cpp,
+\emph default
+ similmente alla classe Velocista, viene invocato anche il costruttore della
+ classe base Ciclista nella member initializer list.
+ Inoltre vengono anche ridefiniti i metodi della classe padre così come
+ l'overriding del metodo 
+\emph on
+toString().
+\end_layout
+
+\begin_layout Subsection
+VelocistaPassista
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Files: VelocistaPassista.h, VelocistaPassista.cpp
+\end_layout
+
+\begin_layout Standard
+VelocistaPassista ha più classi base che sono velocista e passista; si ha
+ quindi un'ereditarietà multipla, in particolare si viene a creare un'ereditarie
+tà a diamante partendo dalla classe Ciclista.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename img/cpp_diamante.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Nel costruttore vengono invocati entrambi i costruttori delle classi base
+ e di Ciclista nella member initializer list.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+VelocistaPassista::VelocistaPassista(string n, string c, string naz, float
+ a, tipociclismo disc, int podi) :
+\end_layout
+
+\begin_layout Plain Layout
+
+		Ciclista(n, c, naz, a, disc), Passista(n, c, naz, a, disc, podi), Velocista(
+ n, c, naz, a, disc) {
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Particolarità di questa classe è che ogni sua istanza potrà usare i metodi
+ di entrambe le classi padre: ad esempio il metodo 
+\emph on
+printGare()
+\emph default
+ dalla classe Velocista o il metodo 
+\emph on
+getPodi()
+\emph default
+ dalla classe Passista.
+ I metodi in comune come 
+\emph on
+toString()
+\emph default
+ sono stati ridefiniti nel file 
+\emph on
+VelocistaPassista.cpp
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+string VelocistaPassista::toString() {
+\end_layout
+
+\begin_layout Plain Layout
+
+	return "[" + this->Ciclista::getIDString() + "] VelocistaPassista " + nome
+ + " " + cognome + " " + nazionalita + " " + this->getDisciplina() + " "
+ + this->getPodi() + " podi";
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Il metodo 
+\emph on
+toString()
+\emph default
+ è sempre stato ridefinito in ogni classe per permettere una più appropriata
+ stampa della classe di appartenenza.
+ Anche il metodo 
+\emph on
+getIDString(),
+\emph default
+ presente in tutte e tre le classi, è stato ridefinito ogni volta in modo
+ tale da apporre le lettere costanti 
+\emph on
+V, P o VP
+\emph default
+ davanti al numero identificativo per riconoscere meglio l'istanza dell'oggetto:
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+string VelocistaPassista::getIDString() {
+\end_layout
+
+\begin_layout Plain Layout
+
+	std::string s = stringify(thisid);
+\end_layout
+
+\begin_layout Plain Layout
+
+	return VPCONST + s;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Team
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Files: Team.h, Team.cpp
+\end_layout
+
+\begin_layout Standard
+Team è una classe in cui è usata una lista per elencare i membri del team:
+ in particolare è stato usato
+\emph on
+ list 
+\emph default
+(Standar Template Library (ST
+\emph on
+L)).
+
+\emph default
+ Questa lista accetta oggetti di tipo Ciclista, quindi qualsiasi sua classe
+ derivata (Velocista, Passista, VelocistaPassista) va bene.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+protected:
+\end_layout
+
+\begin_layout Plain Layout
+
+	std::list<Ciclista*> l;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Oltre a questa lista con visibilità protected, ci sono due campi privati
+ e alcuni metodi pubblici in aggiunta al costruttore e al distruttore.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+private:
+\end_layout
+
+\begin_layout Plain Layout
+
+	string nomesquadra;
+\end_layout
+
+\begin_layout Plain Layout
+
+	string origine;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+public:
+\end_layout
+
+\begin_layout Plain Layout
+
+	Team(string ns, string o); // Costruttore
+\end_layout
+
+\begin_layout Plain Layout
+
+	virtual ~Team(); // Distruttore
+\end_layout
+
+\begin_layout Plain Layout
+
+	string getNomeSquadra();
+\end_layout
+
+\begin_layout Plain Layout
+
+	void aggiungi(Ciclista *c);
+\end_layout
+
+\begin_layout Plain Layout
+
+	void stampa();
+\end_layout
+
+\begin_layout Plain Layout
+
+	float etaMedia();
+\end_layout
+
+\begin_layout Plain Layout
+
+	void stampaNaz(string naz);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Interessante osservare che nel distruttore, prima di liberare l'istanza
+ della classe, viene anche svuotata la lista dei membri del team:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Team::~Team() {
+\end_layout
+
+\begin_layout Plain Layout
+
+	cout << "Delete Team" << endl;
+\end_layout
+
+\begin_layout Plain Layout
+
+	l.clear(); // Elimina tutti i giocatori dalla lista
+\end_layout
+
+\begin_layout Plain Layout
+
+	free(this);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Nel listato di seguito sono descritti alcuni metodi di questa classe; per
+ scorrere la lista nei vari cicli for è stato usato un 
+\emph on
+iterator:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+float Team::etaMedia() {
+\end_layout
+
+\begin_layout Plain Layout
+
+	float eta = 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+	Ciclista *c;
+\end_layout
+
+\begin_layout Plain Layout
+
+	list<Ciclista*>::iterator x; // Iteratore per scorrere il vettore
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	for (x = l.begin(); x != l.end(); x++) {
+\end_layout
+
+\begin_layout Plain Layout
+
+		c = *x; // Estraggo il ciclista
+\end_layout
+
+\begin_layout Plain Layout
+
+		eta = eta + c->getEta(); // Estraggo l'età di ogni ciclista del team
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	float etamedia = eta / l.size(); // Calcolo l'età media del team
+\end_layout
+
+\begin_layout Plain Layout
+
+	return etamedia;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+void Team::stampa() {
+\end_layout
+
+\begin_layout Plain Layout
+
+	Ciclista *c;
+\end_layout
+
+\begin_layout Plain Layout
+
+	list<Ciclista*>::iterator x;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	for (x = l.begin(); x != l.end(); x++) {
+\end_layout
+
+\begin_layout Plain Layout
+
+		c = *x; // Estraggo il ciclista
+\end_layout
+
+\begin_layout Plain Layout
+
+		cout << c->toString() << endl; // Stampo ogni ciclista del team
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+void Team::stampaNaz(string naz) {
+\end_layout
+
+\begin_layout Plain Layout
+
+	Ciclista *c;
+\end_layout
+
+\begin_layout Plain Layout
+
+	list<Ciclista*>::iterator x;
+\end_layout
+
+\begin_layout Plain Layout
+
+	cout << "
+\backslash
+nCiclisti del team " << this->getNomeSquadra() << " di origine " + naz +
+ ": " << endl;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	for (x = l.begin(); x != l.end(); x++) {
+\end_layout
+
+\begin_layout Plain Layout
+
+		c = *x;
+\end_layout
+
+\begin_layout Plain Layout
+
+		if (c->getNazione() == naz) {
+\end_layout
+
+\begin_layout Plain Layout
+
+			cout << c->getNome() + " " + c->getCognome() << endl;
+\end_layout
+
+\begin_layout Plain Layout
+
+		} // Controllo della nazione e stampa del ciclista
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Lega
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Files: Lega.h, Lega.cpp
+\end_layout
+
+\begin_layout Standard
+Lega è una classe che racchiude l'unione di più team in cui è usato il 
+\emph on
+singleton
+\emph default
+; infatti esisterà soltanto un'istanza della Lega definita in questo modo:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+/* TemplateStringify.h  */
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+class Lega {
+\end_layout
+
+\begin_layout Plain Layout
+
+public:
+\end_layout
+
+\begin_layout Plain Layout
+
+	static Lega* getInstance(); // Singleton
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	~Lega();
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	string const& getNome() const; 
+\end_layout
+
+\begin_layout Plain Layout
+
+	void setNome(string const &nome); 
+\end_layout
+
+\begin_layout Plain Layout
+
+	void stampa();
+\end_layout
+
+\begin_layout Plain Layout
+
+	void nuovoTeamIscritto(Team *t);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\end_layout
+
+\begin_layout Plain Layout
+
+private: 
+\end_layout
+
+\begin_layout Plain Layout
+
+	static Lega *instance;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	Lega(); // Costruttore privato
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	string nome;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	std::list<Team*> teams;
+\end_layout
+
+\begin_layout Plain Layout
+
+};
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Nel file 
+\emph on
+Lega.cpp
+\emph default
+ viene definito 
+\emph on
+getInstance()
+\emph default
+ per poter avere l'unica istanza della Lega.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Lega *Lega::instance = NULL;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Lega::Lega() : nome("") { }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Lega* Lega::getInstance() { 
+\end_layout
+
+\begin_layout Plain Layout
+
+	return instance ? instance : (instance = new Lega()); // Singleton 
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Time
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+File: Time.h
+\end_layout
+
+\begin_layout Standard
+Time è una libreria usata dalle varie classi viste in precedenza per rappresenta
+re meglio il tempo in ore, minuti, secondi.
+ Ad esempio è stata usata nella classe Velocista per memorizzare il tempo
+ di gara nella coppia memorizzata in 
+\emph on
+vector
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+/* Time.h  */
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+using namespace std;
+\end_layout
+
+\begin_layout Plain Layout
+
+#include <iostream>
+\end_layout
+
+\begin_layout Plain Layout
+
+#include "TemplateStringify.h" // Template per la conversione di interi in
+ stringhe
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#ifndef TIME_H_
+\end_layout
+
+\begin_layout Plain Layout
+
+#define TIME_H_
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+class Time {
+\end_layout
+
+\begin_layout Plain Layout
+
+private:
+\end_layout
+
+\begin_layout Plain Layout
+
+	int hour, minutes, seconds;
+\end_layout
+
+\begin_layout Plain Layout
+
+public:
+\end_layout
+
+\begin_layout Plain Layout
+
+	Time() {
+\end_layout
+
+\begin_layout Plain Layout
+
+		hour = minutes = seconds = 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+	Time(int h) {
+\end_layout
+
+\begin_layout Plain Layout
+
+		setTime(h, 0, 0);
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+	Time(int h, int m, int s = 0) { // Default arguments
+\end_layout
+
+\begin_layout Plain Layout
+
+		setTime(h, m, s);
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	void setTime(int h, int m, int s) {
+\end_layout
+
+\begin_layout Plain Layout
+
+		hour = (h >= 0 && h < 24) ? h : 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+		minutes = (m >= 0 && m < 60) ? m : 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+		seconds = (s >= 0 && s < 60) ? s : 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	void printMilitary() {
+\end_layout
+
+\begin_layout Plain Layout
+
+		cout << hour << ":" << minutes << ":" << seconds;
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	string getMilitary() {
+\end_layout
+
+\begin_layout Plain Layout
+
+		return "" + stringify(hour) + ":" + stringify(minutes) + ":" + stringify(secon
+ds);
+\end_layout
+
+\begin_layout Plain Layout
+
+	} };
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#endif /* TIME_H_ */
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+È presente l'overloading del costruttore, in particolare nel terzo sono
+ stati usati anche i 
+\emph on
+default arguments
+\emph default
+.
+ Sono stati definiti anche alcuni metodi per settare o per stampare il tempo.
+\end_layout
+
+\begin_layout Subsection
+TemplateStringify.h
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+File: TemplateStringify.h
+\end_layout
+
+\begin_layout Standard
+TemplateStringify è un template per la conversione di interi in stringhe.
+\end_layout
+
+\begin_layout Standard
+Dato che in MINGW su Windows la stampa a schermo di interi necessita di
+ un'anteriore conversione usando la libreria sstream, ho creato un template
+ che permette alle altre classi di stampare interi in formato stringa sempliceme
+nte chiamando il metodo 
+\emph on
+stringify.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+/* TemplateStringify.h  */
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#include <iostream>
+\end_layout
+
+\begin_layout Plain Layout
+
+#include <string>
+\end_layout
+
+\begin_layout Plain Layout
+
+#include <sstream> // Metodo str
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#ifndef TEMPLATESTRINGIFY_H_
+\end_layout
+
+\begin_layout Plain Layout
+
+#define TEMPLATESTRINGIFY_H_
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+template<typename T> inline std::string stringify(const T &t) { // Inline
+\end_layout
+
+\begin_layout Plain Layout
+
+	std::stringstream string_stream;
+\end_layout
+
+\begin_layout Plain Layout
+
+	string_stream << t;
+\end_layout
+
+\begin_layout Plain Layout
+
+	return string_stream.str();
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+template<typename T, typename ...
+ Args>
+\end_layout
+
+\begin_layout Plain Layout
+
+inline std::string stringify(const T &first, Args ...
+ args) { // Inline
+\end_layout
+
+\begin_layout Plain Layout
+
+	return stringify(first) + stringify(args...);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#endif /* TEMPLATESTRINGIFY_H_ */ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Le due funzioni accettano parametri di tipo T-generic e possono convertire
+ in stringhe non soltanto interi; sono funzioni inline in quanto sono definite
+ all'interno di un file 
+\emph on
+.h
+\emph default
+.
+\end_layout
+
+\begin_layout Subsection
+Main
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+File: Main.cpp
+\end_layout
+
+\begin_layout Standard
+Nella classe main ho testato tutte le funzioni dell'applicazione.
+\end_layout
+
+\end_body
+\end_document

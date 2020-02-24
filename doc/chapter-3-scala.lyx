@@ -1,0 +1,1379 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass scrbook
+\begin_preamble
+% in case somebody want to have the label "Equation"
+%\renewcommand{\eqref}[1]{Equation~(\negthinspace\autoref{#1})}
+
+% that links to image floats jumps to the beginning
+% of the float and not to its caption
+\usepackage[figure]{hypcap}
+
+% the pages of the TOC is numbered roman
+% and a pdf-bookmark for the TOC is added
+\let\myTOC\tableofcontents
+\renewcommand\tableofcontents{%
+  \frontmatter
+  \pdfbookmark[1]{\contentsname}{}
+  \myTOC
+  \mainmatter }
+
+% makes caption labels bold
+% for more info about these settings, see
+% https://ctan.org/tex-archive/macros/latex/contrib/koma-script/doc/scrguien.pdf
+\setkomafont{captionlabel}{\bfseries}
+\setcapindent{1em}
+
+% enables calculations
+\usepackage{calc}
+
+% fancy page header/footer settings
+% for more information see section 9 of
+% ftp://www.ctan.org/pub/tex-archive/macros/latex2e/contrib/fancyhdr/fancyhdr.pdf
+\renewcommand{\chaptermark}[1]{\markboth{#1}{#1}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+
+% increases the bottom float placement fraction
+\renewcommand{\bottomfraction}{0.5}
+
+% avoids that floats are placed above its sections
+\let\mySection\section\renewcommand{\section}{\suppressfloats[t]\mySection}
+
+% increases link area for cross-references and autoname them
+% if you change the document language to e.g. French
+% you must change "extrasenglish" to "extrasfrench"
+% if you uncomment the following lines, you cannot use the reference version Ref+Text in LyX
+%\AtBeginDocument{%
+% \renewcommand{\ref}[1]{\autoref{#1}}
+%}
+%\def\refnamechanges{%
+% \renewcommand*{\equationautorefname}[1]{}
+% \renewcommand{\sectionautorefname}{sec.\negthinspace}
+% \renewcommand{\subsectionautorefname}{sec.\negthinspace}
+% \renewcommand{\subsubsectionautorefname}{sec.\negthinspace}
+% \renewcommand{\figureautorefname}{Fig.\negthinspace}
+% \renewcommand{\tableautorefname}{Tab.\negthinspace}
+%}
+%\@ifpackageloaded{babel}{\addto\extrasenglish{\refnamechanges}}{\refnamechanges}
+\end_preamble
+\options intoc,bibliography=totoc,index=totoc,BCOR10mm,captions=tableheading,titlepage
+\use_default_options true
+\master project.lyx
+\begin_modules
+customHeadersFooters
+\end_modules
+\maintain_unincluded_children false
+\language italian
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "lmodern" "default"
+\font_sans "lmss" "default"
+\font_typewriter "lmtt" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures false
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command bibtex
+\index_command default
+\float_placement h
+\paperfontsize 12
+\spacing single
+\use_hyperref true
+\pdf_title "Your title"
+\pdf_author "Your name"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder true
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle false
+\pdf_quoted_options "pdfpagelayout=OneColumn, pdfnewwindow=true, pdfstartview=XYZ, plainpages=false"
+\papersize a4paper
+\use_geometry false
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\branch Standalone
+\selected 1
+\filename_suffix 0
+\color #ff0000
+\end_branch
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 2
+\paragraph_separation skip
+\defskip medskip
+\is_math_indent 1
+\math_indentation default
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 2
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Left Header
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+chaptername
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+thechapter
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+rightmark
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Right Header
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+leftmark
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Left Footer
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+thepage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Center Footer
+
+\end_layout
+
+\begin_layout Right Footer
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+thepage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Scala
+\end_layout
+
+\begin_layout Standard
+Ho sviluppato un'applicazione per mostrare i costrutti tipici di Scala:
+ classi astratte e non, trait, object, variabili immutabili (val) e mutabili
+ (var), funzioni (def), override di funzioni, default argument, try catch,
+ ereditarità singola delle classi (Scala non permette l'ereditarietà multipla
+ se non attraverso i traits).
+ Inoltre è presente anche la collezione 
+\emph on
+list
+\emph default
+ con i metodi 
+\emph on
+foreach
+\emph default
+, 
+\emph on
+filter
+\emph default
+ e 
+\emph on
+map
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+Ho usato ancora il ciclismo come contesto.
+\end_layout
+
+\begin_layout Section
+Classi
+\end_layout
+
+\begin_layout Standard
+Il progetto è strutturato secondo il paradigma OO, la struttura delle classi
+ è la seguente:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename img/scala_classi.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+È presente un'ereditarietà singola sia per Ciclista che per Gara.
+ Inoltre è presente una
+\emph on
+ 
+\emph default
+classe astratta Persona e un 
+\emph on
+trait
+\emph default
+ Sponsor.
+\end_layout
+
+\begin_layout Subsection
+Persona
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+File: Persona.scala
+\end_layout
+
+\begin_layout Standard
+Persona è una classe astratta estesa successivamente da Ciclista e definita
+ nel seguente modo:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+abstract class Persona(val nome: String, val cognome: String, private var
+ _age: Int) {
+\end_layout
+
+\begin_layout Plain Layout
+
+	if (this._age < 0) throw new IllegalArgumentException
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	def age = _age
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	def age_=(v: Int): Unit = {
+\end_layout
+
+\begin_layout Plain Layout
+
+    if (v >= 0) _age = v else throw new IllegalArgumentException
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	override def toString: String = { nome + cognome + "(" + age + ")" } 
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+È stato aggiunto anche un controllo sul valore dell'età con il 
+\emph on
+try-catch
+\emph default
+ nel main: nel caso l'età inserita fosse negativa si lancia un'eccezione
+ catturata nel main in questo modo:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+try {
+\end_layout
+
+\begin_layout Plain Layout
+
+	val cerror = new Professionista("Luca", "Lucchetti", -22, "Italia", "Conad")
+\end_layout
+
+\begin_layout Plain Layout
+
+} catch {
+\end_layout
+
+\begin_layout Plain Layout
+
+	case e: IllegalArgumentException => println("Età non valida")
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Importante notare anche che alcune variabili sono definite come immutabili
+ 
+\emph on
+val
+\emph default
+ e altre mutabili 
+\emph on
+var
+\emph default
+.
+\end_layout
+
+\begin_layout Subsection
+Ciclista
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+File: Ciclista.scala
+\end_layout
+
+\begin_layout Standard
+La classe Ciclista estende la classe Persona con campi e metodi aggiuntivi.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+// Campi
+\end_layout
+
+\begin_layout Plain Layout
+
+val nazione: String = naz
+\end_layout
+
+\begin_layout Plain Layout
+
+var sponsor: String = ""
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+// Metodi
+\end_layout
+
+\begin_layout Plain Layout
+
+def getName() = this.n
+\end_layout
+
+\begin_layout Plain Layout
+
+def getCognome() = this.c
+\end_layout
+
+\begin_layout Plain Layout
+
+def getAge() = this.age
+\end_layout
+
+\begin_layout Plain Layout
+
+def getNazione() = this.naz
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+override def toString(): String = { nome + " " + cognome + " (" + age +
+ ", " + nazione + ")" }
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Viene eseguito anche l'override del metodo 
+\emph on
+toString()
+\emph default
+.
+ Nello stesso file ci sono due sottoclassi di Ciclista: Amatore e Professionista
+ definite nel seguente modo:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+// Sottoclasse Amatore estende Ciclista
+\end_layout
+
+\begin_layout Plain Layout
+
+class Amatore(n: String, c: String, age: Int, naz: String) extends Ciclista(n:
+ String, c: String, age: Int, naz: String) { }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+// Sottoclasse Amatore estende Ciclista con trait Sponsor
+\end_layout
+
+\begin_layout Plain Layout
+
+class Professionista(n: String, c: String, age: Int, naz: String, s: String
+ = "Nessuno") extends Ciclista(n: String, c: String, age: Int, naz: String)
+ with Sponsor {
+\end_layout
+
+\begin_layout Plain Layout
+
+	sponsor = s
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La sottoclasse Professionista implementa anche il 
+\emph on
+trait
+\emph default
+ Sponsor descritto nella prossima sottosezione; nei parametri della classe
+ Professionista è stato usato anche un default argument sulla stringa 
+\emph on
+s
+\emph default
+ per indicare l'assenza di sponsor.
+\end_layout
+
+\begin_layout Subsection
+Sponsor
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+File: Sponsor.scala
+\end_layout
+
+\begin_layout Standard
+Sponsor è un 
+\emph on
+trait
+\emph default
+, ossia un'interfaccia condivisa tra classi simile alle interfacce di Java.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+// Trait Sponsor
+\end_layout
+
+\begin_layout Plain Layout
+
+trait Sponsor extends Ciclista {
+\end_layout
+
+\begin_layout Plain Layout
+
+	def sponsorizzato = println(s"$nome è sponsorizzato da $sponsor")
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Gara
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+File: Gara.scala
+\end_layout
+
+\begin_layout Standard
+La classe Gara definisce tutte le informazioni relative a una gara svolta
+ come: nome della gara, partecipanti con il relativo tempo, identificativo
+ e tipo di gara.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+// Campi
+\end_layout
+
+\begin_layout Plain Layout
+
+val titolo: String = d
+\end_layout
+
+\begin_layout Plain Layout
+
+var partecipanti: List[(Ciclista, Double)] = a
+\end_layout
+
+\begin_layout Plain Layout
+
+var tipo: String = ""
+\end_layout
+
+\begin_layout Plain Layout
+
+var ID: String = ""
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Come si può notare, per salvare la tupla 
+\emph on
+(Ciclista, Tempo)
+\emph default
+ tra i partecipanti a una gara è stata usata una lista.
+\end_layout
+
+\begin_layout Standard
+Inoltre vengono definite tre sottoclassi relative alle varie specialità:
+ Sprint, Resistenza e Mista.
+ Ognuna di queste classi setterà anche l'identificativo e il tipo di gara
+ appropriato.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+class Sprint(d: String, a: List[(Ciclista, Double)], id: Int) extends Gara(d:
+ String, a: List[(Ciclista, Double)]) {
+\end_layout
+
+\begin_layout Plain Layout
+
+	if (id < 1000 || id > 9999) println("Errore ID")
+\end_layout
+
+\begin_layout Plain Layout
+
+	else this.ID = "S" + id
+\end_layout
+
+\begin_layout Plain Layout
+
+	this.tipo = "Sprint"
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+class Resistenza(d: String, a: List[(Ciclista, Double)], id: Int) extends
+ Gara(d: String, a: List[(Ciclista, Double)]) {
+\end_layout
+
+\begin_layout Plain Layout
+
+	if (id < 1000 || id > 9999) println("Errore ID")
+\end_layout
+
+\begin_layout Plain Layout
+
+	else this.ID = "R" + id
+\end_layout
+
+\begin_layout Plain Layout
+
+	this.tipo = "Resistenza"
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+class Mista(d: String, a: List[(Ciclista, Double)], id: Int) extends Gara(d:
+ String, a: List[(Ciclista, Double)]) {
+\end_layout
+
+\begin_layout Plain Layout
+
+	if (id < 1000 || id > 9999) println("Errore ID")
+\end_layout
+
+\begin_layout Plain Layout
+
+	else this.ID = "M" + id
+\end_layout
+
+\begin_layout Plain Layout
+
+	this.tipo = "Mista"
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sempre nella classe Gara vengono definititi i seguenti metodi:
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+printPartecipanti()
+\emph default
+: stampa lista di ciclisti partecipanti a una gara.
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+def printPartecipanti() {
+\end_layout
+
+\begin_layout Plain Layout
+
+	def stampaPartecipanti(a: (Ciclista, Double)) = {
+\end_layout
+
+\begin_layout Plain Layout
+
+		println(a._1.toString() + " con " + a._2)
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    partecipanti.foreach(stampaPartecipanti)
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+È stato usato il 
+\emph on
+foreach
+\emph default
+ per scorrere la lista di tutti i partecipanti con il relativo tempo.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+winner()
+\emph default
+: stampa il vincitore di una gara.
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+def winner() {
+\end_layout
+
+\begin_layout Plain Layout
+
+    var ttt: Double = 9999
+\end_layout
+
+\begin_layout Plain Layout
+
+    var nome: String = ""
+\end_layout
+
+\begin_layout Plain Layout
+
+    var cognome: String = ""
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    def mintempo(a: (Ciclista, Double)) = {
+\end_layout
+
+\begin_layout Plain Layout
+
+		if (a._2 < ttt)
+\end_layout
+
+\begin_layout Plain Layout
+
+        	ttt = a._2
+\end_layout
+
+\begin_layout Plain Layout
+
+		nome = a._1.nome
+\end_layout
+
+\begin_layout Plain Layout
+
+		cognome = a._1.cognome
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    partecipanti.foreach(mintempo)
+\end_layout
+
+\begin_layout Plain Layout
+
+    println(nome + " " + cognome + " con un tempo di " + ttt)
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+È stato usato il 
+\emph on
+foreach
+\emph default
+ per scorrere la lista di tutti i partecipanti con il relativo tempo.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+partecipantiProfessionisti()
+\emph default
+: stampa tutti i partecipanti professionisti di una gara.
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+def partecipantiProfessionisti() {
+\end_layout
+
+\begin_layout Plain Layout
+
+	var ciclistiList: List[Ciclista] = List()
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	def doList(a: (Ciclista, Double)) {
+\end_layout
+
+\begin_layout Plain Layout
+
+		ciclistiList :::= List(a._1)
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    partecipanti.foreach(doList)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    ciclistiList
+\end_layout
+
+\begin_layout Plain Layout
+
+		.filter(_.isInstanceOf[Professionista])
+\end_layout
+
+\begin_layout Plain Layout
+
+		.map(_.asInstanceOf[Professionista])
+\end_layout
+
+\begin_layout Plain Layout
+
+		.map(_.sponsorizzato)
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+Per poter eseguire il
+\emph on
+ foreach
+\emph default
+ ho dovuto prima estrarre solo l'elenco dei ciclisti dalla tupla e poi verificar
+e se siano o meno un'istanza di Professionista attraverso
+\emph on
+ filter
+\emph default
+ e 
+\emph on
+map
+\emph default
+; in seguito uso 
+\emph on
+map
+\emph default
+ con il metodo 
+\emph on
+sponsorizzato
+\emph default
+ (definito nel trait) per stampare lo sponsor dei professionisti.
+\end_layout
+
+\begin_layout Subsection
+Organizzatore
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+File: Organizzatore.scala
+\end_layout
+
+\begin_layout Standard
+Organizzatore è una classe che riceve come parametro una lista di gare e
+ ha i seguenti metodi:
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+insert(g: Gara)
+\emph default
+: inserisce una gara in testa alla lista.
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+def insert(g: Gara) = {
+\end_layout
+
+\begin_layout Plain Layout
+
+	lista :::= List(g)
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+print()
+\emph default
+: stampa tutte le gare gestite.
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+def print() = {
+\end_layout
+
+\begin_layout Plain Layout
+
+    def stampa(g: Gara) = {
+\end_layout
+
+\begin_layout Plain Layout
+
+		println("[" + g.ID + " '" + g.titolo + "' " + g.tipo + "]")
+\end_layout
+
+\begin_layout Plain Layout
+
+		println("Partecipanti:")
+\end_layout
+
+\begin_layout Plain Layout
+
+		g.printPartecipanti
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	lista.foreach(stampa)
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+find(chiave: String)
+\emph default
+: cerca una gara dall'identificativo passato e restituisce un booleano.
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+def find(chiave: String): Boolean = {
+\end_layout
+
+\begin_layout Plain Layout
+
+    var trovato: Boolean = false
+\end_layout
+
+\begin_layout Plain Layout
+
+   
+\end_layout
+
+\begin_layout Plain Layout
+
+	def trova(g: Gara): Boolean = {
+\end_layout
+
+\begin_layout Plain Layout
+
+		if (g.ID == chiave) {
+\end_layout
+
+\begin_layout Plain Layout
+
+			trovato = true; println("Evento trovato: " + g.ID + " '" + g.titolo + "'
+ " + g.tipo)
+\end_layout
+
+\begin_layout Plain Layout
+
+		}
+\end_layout
+
+\begin_layout Plain Layout
+
+		trovato
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+	lista.foreach(trova)
+\end_layout
+
+\begin_layout Plain Layout
+
+    trovato
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+vincitoregare()
+\emph default
+: stampa i vincitori di ogni gara.
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+def vincitoregare() = {
+\end_layout
+
+\begin_layout Plain Layout
+
+	def v(g: Gara) = {
+\end_layout
+
+\begin_layout Plain Layout
+
+		println("Vincitore gara '" + g.titolo + "': ")
+\end_layout
+
+\begin_layout Plain Layout
+
+		g.winner
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    lista.foreach(v)
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Main
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+File: Main.scala
+\end_layout
+
+\begin_layout Standard
+Nella classe main ho testato tutte le funzioni dell'applicazione.
+\end_layout
+
+\end_body
+\end_document

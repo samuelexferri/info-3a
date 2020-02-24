@@ -1,0 +1,1063 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass scrbook
+\begin_preamble
+% in case somebody want to have the label "Equation"
+%\renewcommand{\eqref}[1]{Equation~(\negthinspace\autoref{#1})}
+
+% that links to image floats jumps to the beginning
+% of the float and not to its caption
+\usepackage[figure]{hypcap}
+
+% the pages of the TOC is numbered roman
+% and a pdf-bookmark for the TOC is added
+\let\myTOC\tableofcontents
+\renewcommand\tableofcontents{%
+  \frontmatter
+  \pdfbookmark[1]{\contentsname}{}
+  \myTOC
+  \mainmatter }
+
+% makes caption labels bold
+% for more info about these settings, see
+% https://ctan.org/tex-archive/macros/latex/contrib/koma-script/doc/scrguien.pdf
+\setkomafont{captionlabel}{\bfseries}
+\setcapindent{1em}
+
+% enables calculations
+\usepackage{calc}
+
+% fancy page header/footer settings
+% for more information see section 9 of
+% ftp://www.ctan.org/pub/tex-archive/macros/latex2e/contrib/fancyhdr/fancyhdr.pdf
+\renewcommand{\chaptermark}[1]{\markboth{#1}{#1}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+
+% increases the bottom float placement fraction
+\renewcommand{\bottomfraction}{0.5}
+
+% avoids that floats are placed above its sections
+\let\mySection\section\renewcommand{\section}{\suppressfloats[t]\mySection}
+
+% increases link area for cross-references and autoname them
+% if you change the document language to e.g. French
+% you must change "extrasenglish" to "extrasfrench"
+% if you uncomment the following lines, you cannot use the reference version Ref+Text in LyX
+%\AtBeginDocument{%
+% \renewcommand{\ref}[1]{\autoref{#1}}
+%}
+%\def\refnamechanges{%
+% \renewcommand*{\equationautorefname}[1]{}
+% \renewcommand{\sectionautorefname}{sec.\negthinspace}
+% \renewcommand{\subsectionautorefname}{sec.\negthinspace}
+% \renewcommand{\subsubsectionautorefname}{sec.\negthinspace}
+% \renewcommand{\figureautorefname}{Fig.\negthinspace}
+% \renewcommand{\tableautorefname}{Tab.\negthinspace}
+%}
+%\@ifpackageloaded{babel}{\addto\extrasenglish{\refnamechanges}}{\refnamechanges}
+\end_preamble
+\options intoc,bibliography=totoc,index=totoc,BCOR10mm,captions=tableheading,titlepage
+\use_default_options true
+\master project.lyx
+\begin_modules
+customHeadersFooters
+\end_modules
+\maintain_unincluded_children false
+\language italian
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "lmodern" "default"
+\font_sans "lmss" "default"
+\font_typewriter "lmtt" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures false
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command bibtex
+\index_command default
+\float_placement h
+\paperfontsize 12
+\spacing single
+\use_hyperref true
+\pdf_title "Your title"
+\pdf_author "Your name"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder true
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle false
+\pdf_quoted_options "pdfpagelayout=OneColumn, pdfnewwindow=true, pdfstartview=XYZ, plainpages=false"
+\papersize a4paper
+\use_geometry false
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\branch Standalone
+\selected 1
+\filename_suffix 0
+\color #ff0000
+\end_branch
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 2
+\paragraph_separation skip
+\defskip medskip
+\is_math_indent 1
+\math_indentation default
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 2
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Left Header
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+chaptername
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+thechapter
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+rightmark
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Right Header
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+leftmark
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Left Footer
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+thepage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Center Footer
+
+\end_layout
+
+\begin_layout Right Footer
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+thepage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Cyclone
+\end_layout
+
+\begin_layout Standard
+Cyclone è un dialetto safe del C che permette di evitare i buffer overflow,
+ stringhe non terminate, dangling pointer e altre vulnerabilità endemiche
+ del linguaggio C, senza perdere la potenza e la convenienza della programmazion
+e strutturata.
+\end_layout
+
+\begin_layout Standard
+Cyclone rende sicure le operazioni riguardanti i puntatori, come la gestione
+ di stringhe e l'aritmetica dei puntatori, introducendo i qualificatori
+ dei puntatori che meglio specificano i possibili valori assunti dai puntatori
+ e aggiungono controlli sull'utilizzo degli stessi.
+\end_layout
+
+\begin_layout Standard
+Il progetto sviluppato è un esempio di porting in Cyclone di un algoritmo
+ C usato per la crittografia di stringhe alfanumeriche usando l'algoritmo
+ RSA.
+\end_layout
+
+\begin_layout Section
+Algoritmo RSA
+\end_layout
+
+\begin_layout Standard
+RSA è un algoritmo di crittografia asimmetrica a chiave pubblica che permette
+ di cifrare un messaggio attraverso un procedimento che sfrutta le proprietà
+ dei numeri primi.
+ 
+\end_layout
+
+\begin_layout Standard
+È basato sull'esistenza di due chiavi: una pubblica conosciuta da tutti
+ usata per cifrare il messaggio e una privata usata solamente per decifrare
+ il messaggio.
+\end_layout
+
+\begin_layout Standard
+Nelle prossime sottosezioni verrà analizzato il funzionamento.
+\end_layout
+
+\begin_layout Subsection
+Creazione delle chiavi
+\end_layout
+
+\begin_layout Standard
+Per generare la chiave pubblica e quella privata bisogna seguire i seguenti
+ punti:
+\end_layout
+
+\begin_layout Enumerate
+Scegliere due numeri interi primi 
+\begin_inset Formula $p$
+\end_inset
+
+ e 
+\begin_inset Formula $q$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Calcolare 
+\begin_inset Formula $n=p·q$
+\end_inset
+
+ dove 
+\begin_inset Formula $n$
+\end_inset
+
+ è il modulo della chiave pubblica e di quella privata
+\end_layout
+
+\begin_layout Enumerate
+Calcolare la funzione di Eulero in questo modo: 
+\begin_inset Formula $Φ(n)=(p-1)·(q-1)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Scegliere un intero 
+\begin_inset Formula $e$
+\end_inset
+
+ tale che sia coprimo di 
+\begin_inset Formula $\text{Φ}(n)$
+\end_inset
+
+ (ossia 
+\begin_inset Formula $MCD(e,\text{Φ}(n))=1)$
+\end_inset
+
+ e che sia 
+\begin_inset Formula $1<e<\text{Φ}(n)$
+\end_inset
+
+; la coppia 
+\begin_inset Formula $\{e,n\}$
+\end_inset
+
+ sarà la chiave pubblica usata per la cifratura.
+\end_layout
+
+\begin_layout Enumerate
+Scegliere un intero 
+\begin_inset Formula $d$
+\end_inset
+
+ tale che 
+\begin_inset Formula $d·e\,mod\,\text{Φ}(n)=1$
+\end_inset
+
+, ossia pari all'inverso del resto della divisione euclidea tra 
+\begin_inset Formula $e$
+\end_inset
+
+ ed 
+\begin_inset Formula $\text{Φ}(n)$
+\end_inset
+
+; la coppia 
+\begin_inset Formula $\{d,n\}$
+\end_inset
+
+ sarà la chiave privata usata per la decifrazione.
+\end_layout
+
+\begin_layout Subsection
+Cifratura del messaggio
+\end_layout
+
+\begin_layout Standard
+Il messaggio in chiaro viene cifrato usando la chiave pubblica 
+\begin_inset Formula $\{e,n\}$
+\end_inset
+
+ conosciuta da chiunque in questo modo:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $C=M^{e}(mod\,n)$
+\end_inset
+
+ dove 
+\begin_inset Formula $M$
+\end_inset
+
+ il messaggio in chiaro e 
+\begin_inset Formula $C$
+\end_inset
+
+ è il messaggio cifrato.
+\end_layout
+
+\begin_layout Standard
+Nel codice abbiamo usato 
+\begin_inset Formula $T$
+\end_inset
+
+ per riferirci ai singoli caratteri da cifrare/decifrare.
+\end_layout
+
+\begin_layout Subsection
+Decifratura del messaggio
+\end_layout
+
+\begin_layout Standard
+Il messaggio criptato viene decifrato usando la chiave privata 
+\begin_inset Formula $\{d,n\}$
+\end_inset
+
+ conosciuta solo dal proprietario in questo modo:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $M=C^{d}(mod\,n)$
+\end_inset
+
+ dove 
+\begin_inset Formula $M$
+\end_inset
+
+ il messaggio in chiaro e 
+\begin_inset Formula $C$
+\end_inset
+
+ è il messaggio cifrato.
+\end_layout
+
+\begin_layout Standard
+Nel codice abbiamo usato 
+\begin_inset Formula $T$
+\end_inset
+
+ per riferirci ai singoli caratteri da cifrare/decifrare.
+\end_layout
+
+\begin_layout Section
+Funzioni
+\end_layout
+
+\begin_layout Itemize
+gcd
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\bar under
+Descrizione
+\bar default
+: Controlla se i due numeri interi passati sono o meno coprimi.
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Parametri
+\bar default
+: 
+\shape italic
+int a, int b
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Tipo di ritorno
+\bar default
+: 
+\shape italic
+int
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+inverse
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\bar under
+Descrizione
+\bar default
+: Calcola l'inverso del resto della divisione euclidea tra a e b.
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Parametri
+\bar default
+: 
+\shape italic
+int a, int b
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Tipo di ritorno
+\bar default
+: 
+\shape italic
+int
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+FindT
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\bar under
+Descrizione
+\bar default
+: Trova il carattere cifrato/decifrato.
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Parametri
+\bar default
+: 
+\shape italic
+int a, int m, int n
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Tipo di ritorno
+\bar default
+: 
+\shape italic
+int
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+FastExponention
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\bar under
+Descrizione
+\bar default
+: Algoritmo di moltiplicazione.
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Parametri
+\bar default
+: 
+\shape italic
+int bit, int n, int *y, int *a
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Tipo di ritorno
+\bar default
+: 
+\shape italic
+void
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+KeyGeneration
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\bar under
+Descrizione
+\bar default
+: Generazioni della chiave privata e pubblica.
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Parametri
+\bar default
+: 
+\shape italic
+-
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Tipo di ritorno
+\bar default
+: 
+\shape italic
+void
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Encryption
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\bar under
+Descrizione
+\bar default
+: Processo di cifratura.
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Parametri
+\bar default
+: 
+\shape italic
+int value, FILE *out
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Tipo di ritorno
+\bar default
+: 
+\shape italic
+void
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Decryption
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\bar under
+Descrizione
+\bar default
+: Processo di decifratura.
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Parametri
+\bar default
+: 
+\shape italic
+int value, FILE *out
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Tipo di ritorno
+\bar default
+: 
+\shape italic
+void
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+In particolare, la funzione di generazione delle chiavi in C usava dei numeri
+ casuali come partenza, in Cyclone per semplicità sono stati fissati a dei
+ valori predefiniti.
+\end_layout
+
+\begin_layout Standard
+In Cyclone ho usato una stringa preimpostata come messaggio da cifrare in
+ modo da poter evidenziare meglio le caratteristiche di questo dialetto.
+ Per questo motivo è stato necessario aggiungere una funzione di supporto
+ per la clonazione delle stringhe (eseguita in modo safe):
+\end_layout
+
+\begin_layout Itemize
+strclone
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\bar under
+Descrizione
+\bar default
+: Clonazione delle stringhe.
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Parametri
+\bar default
+: 
+\shape italic
+const char *@notnull @fat src
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Tipo di ritorno
+\bar default
+: 
+\shape italic
+char *@notnull @fat 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Costrutti Cyclone usati
+\end_layout
+
+\begin_layout Standard
+Vediamo ora in dettaglio quali sono i costrutti di Cyclone usati nel progetto.
+\end_layout
+
+\begin_layout Subsection
+Puntatori *
+\end_layout
+
+\begin_layout Standard
+Cyclone introduce delle modifiche riguardo l'uso di normali puntatori *
+ rispetto al linguaggio C:
+\end_layout
+
+\begin_layout Itemize
+Controllo se il puntatore è nullo ad ogni de-reference dello stesso (previene
+ Segmentation Fault)
+\end_layout
+
+\begin_layout Itemize
+Cast vietato da int a puntatore (previene Out of Bounds)
+\end_layout
+
+\begin_layout Itemize
+Aritmetica dei puntatori vietata (previene Buffer Overflow / Overrun e Out
+ of Bounds)
+\end_layout
+
+\begin_layout Standard
+Cyclone quindi mette a disposizione dei qualificatori per puntatori che
+ meglio specificano gli utilizzi che si possono fare degli stessi.
+\end_layout
+
+\begin_layout Subsection
+Qualificatore @notnull (puntatore @)
+\end_layout
+
+\begin_layout Standard
+Il controllo se un puntatore non sia nullo è molto dispendioso; usando questo
+ qualificatore possiamo effettuare il controllo all'assegnamento del valore
+ e evitarlo al suo utilizzo.
+\end_layout
+
+\begin_layout Standard
+Può essere espresso sia con: 
+\series bold
+* @notnull
+\series default
+ che semplicemente con 
+\series bold
+@.
+\end_layout
+
+\begin_layout Standard
+Nel progetto è stato usato molto frequentemente, sia per puntatori a stringhe
+ che a files.
+\end_layout
+
+\begin_layout Subsection
+Qualificatore @fat (puntatore ?)
+\end_layout
+
+\begin_layout Standard
+Il puntatore definito con questo qualificatore mantiene anche l'informazione
+ sul numero degli elementi dell'array; è possibile accedere a questo numero
+ con 
+\series bold
+numelts(p)
+\series default
+.
+ Questo qualificatore permette l'aritmetica dei puntatori attraverso il
+ controllo sui limiti dell'array.
+ Tutti gli array possono essere convertiti a @fat (e generalmente viene
+ fatto essendo molto utile).
+\end_layout
+
+\begin_layout Standard
+Questo qualificatore è particolarmente utile per poter conoscere la dimensione
+ delle stringhe senza dover usare strlen (e i problemi legati all'uso del
+ terminatore '
+\backslash
+0' generati da questa funzione).
+\end_layout
+
+\begin_layout Standard
+Può essere espresso sia con: 
+\series bold
+* @fat
+\series default
+ che semplicemente con 
+\series bold
+?.
+\end_layout
+
+\begin_layout Standard
+Nel progetto è stato usato nella definizione della stringa del messaggio
+ da decifrare e nella funzione di clonazione delle stringhe.
+\end_layout
+
+\begin_layout Subsection
+Qualificatore @zeroterm
+\end_layout
+
+\begin_layout Standard
+I puntatori definiti con questo qualificatore indicano che gli array a cui
+ puntano sono terminati da caratteri '
+\backslash
+0'.
+ Sono molto utili per la gestione delle stringhe: infatti tutti i puntatori
+ a 
+\shape italic
+char
+\shape default
+, fatta eccezione di 
+\shape italic
+char[]
+\shape default
+ sono di default 
+\shape italic
+@zeroterm
+\shape default
+.
+ Esiste anche il qualificatore 
+\shape italic
+@nozeroterm
+\shape default
+.
+\end_layout
+
+\begin_layout Standard
+Questo qualificatore permette l'aritmetica dei puntatori (controllando che
+ non vi siano dei terminatori di stringa all'interno), ma questo può diventare
+ dispendioso se non usato in combinazione con @fat.
+\end_layout
+
+\begin_layout Standard
+Nel progetto è stato usato nella definizione della stringa del messaggio
+ da decifrare
+\end_layout
+
+\begin_layout Subsection
+Qualificatore @numelts(n) (Bounded pointers)
+\end_layout
+
+\begin_layout Standard
+Indica che il puntatore deve puntare ad un array con esattamente quel numero
+ di elementi.
+ Se l'array contiene più elementi viene generato un warning, se ne contiene
+ di meno un errore.
+\end_layout
+
+\begin_layout Standard
+Nel progetto è stato usato per indicare che gli argomenti della funzione
+ FastExponention sono dei puntatori a un solo elemento 
+\shape italic
+@numelts(1)
+\shape default
+.
+\end_layout
+
+\begin_layout Subsection
+Garbage collector e calloc()
+\end_layout
+
+\begin_layout Standard
+La funzione 
+\emph on
+malloc()
+\emph default
+ di C, non garantisce che la memoria allocata sia inizializzata.
+ La funzione 
+\emph on
+calloc()
+\emph default
+ invece azzera tutti i byte della memoria allocata.
+\end_layout
+
+\begin_layout Standard
+Nel progetto è stata sostituita la chiamata 
+\emph on
+malloc()
+\emph default
+ con 
+\emph on
+calloc()
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+Inoltre è possibile affidarsi al garbage collector presente in Cyclone,
+ infatti tutte le variabili allocate nello heap non sono liberate attraverso
+ delle chiamate a 
+\emph on
+free()
+\emph default
+ ma gestite in maniera automatica dal garbage collector, che si occuperà
+ di liberare la memoria quando le variabili non sono più referenziate da
+ alcun puntatore.
+\end_layout
+
+\begin_layout Standard
+Nel progetto è stata ugualmente mantenuta la chiamata a 
+\emph on
+\bar under
+free()
+\emph default
+\bar default
+.
+\end_layout
+
+\begin_layout Subsection
+Files
+\end_layout
+
+\begin_layout Standard
+Nel progetto sono stati usati i files in modo da poter scrivere il messaggio
+ cifrato in 
+\shape italic
+chiper.txt
+\shape default
+ e il messaggio successivamente decifrato in 
+\shape italic
+dechiper.txt
+\shape default
+.
+ All'apertura di questi file è stato usato il qualificatore 
+\emph on
+@notnull
+\emph default
+.
+\end_layout
+
+\end_body
+\end_document
