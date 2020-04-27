@@ -4,16 +4,12 @@
 <img src="https://github.com/samuelexferri/info-3a/blob/master/images/programming.png" width="400">
 </p>
 
-Information Technology III A's projects
+Information Technology III A projects
 
 -   Cyclone
 -   C++
 -   Scala
 -   Abstract State Machines
-
-[samuelexferri.com](https://samuelexferri.com)
-
-[samuelexferri.github.io](https://samuelexferri.github.io)
 
 ![alt text](https://img.shields.io/badge/Language-Italian-infomrmational?style=for-the-badge)
 
