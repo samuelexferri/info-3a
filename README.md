@@ -1,7 +1,7 @@
 # Information Technology III A
 
 <p align="center">
-<img src="https://github.com/samuelexferri/info-3a/blob/master/images/programming.png" width="400">
+<img src="https://github.com/samuelexferri/unibg-info3a/blob/master/images/programming.png" width="400">
 </p>
 
 Information Technology III A projects
